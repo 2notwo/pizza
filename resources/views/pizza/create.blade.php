@@ -14,19 +14,25 @@
                     </ul>
                 </div>
             </div>
+            @if(count($errors)>0)
+            <div class="card mt-5">
+                <div class="card-body">
+                    @if(count($errors)>0)
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                            <p>{{$error}}</p>
+                        @endforeach
+                    </div>
+                    @endif
+                </div>
+            </div>
+            @endif
         </div>
 
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Pizza') }}</div>
-            @if(count($errors)>0)
-                <div class="alert alert-danger">
-                    @foreach($errors->all() as $error)
-                        <p>{{$error}}</p>
-                    @endforeach
-                </div>
-            @endif
-            <form action="{{route('pizza.store')}}" method="POST">
+            <form action="{{route('pizza.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
@@ -55,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label>Image</label>
-                        <input type="file" name="image" class="form-control" name="iamge">
+                        <input type="file" name="image" class="form-control">
                     </div>
                     <div class="form-group text-center">
                         <button class="btn btn-primary" type="submit">Save</button>

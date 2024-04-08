@@ -24,11 +24,11 @@ class PizzaStoreRequest extends FormRequest
         return [
             'name'=>'required|string|min:3|max:40',
             'description'=>'required|min:3|max:500',
-            'small_price_pizza'=>'required|number',
-            'medium_price_pizza'=>'required|number',
-            'large_price_pizza'=>'required|number',
+            'small_pizza_price'=>'required|numeric',
+            'medium_pizza_price'=>'required|numeric',
+            'large_pizza_price'=>'required|numeric',
             'category'=>'required',
-            'image'=>'required|mimes:png,jpeg,jpg'
+            'image'=>'required'
         ];
     }
 }
