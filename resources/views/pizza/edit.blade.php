@@ -41,10 +41,9 @@
                         <label for="description">Category</label>
                         <select class="form-control" name="category">
                             <option value=""></option>
-                            <option value="margherita">Margherita</option>
-                            <option value="gimmethemeat">Gimme The Meat</option>
-                            <option value="veggiedelight">Veggie Delight</option>
-                            <option value="makeminehot">Make Mine Hot</option>
+                            <option value="classic">Classic</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="spicy">Spicy</option>
                         </select>
                     </div>
                     <div class="form-group">
