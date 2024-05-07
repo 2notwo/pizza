@@ -16,7 +16,6 @@
                             <input type="submit" value="Spicy" name="category" class="list-group-item list-group-item-action">
 
                         </form>
-                        <h1 class="text-center">{{count($pizzas)}} pizza</h1>
                     </ul>
 
                 </div>
@@ -24,7 +23,7 @@
         </div>
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Pizza') }}</div>
+                <div class="card-header">{{count($pizzas)}} Pizzas</div>
 
                 <div class="card-body">
                     <div class="row">
